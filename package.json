@@ -1,5 +1,6 @@
 {
   "name": "bimbalasaas-desktop",
+  "productName": "Bimbala Desktop",
   "version": "1.0.0",
   "description": "Desktop app version of Bimbala",
   "main": "main.js",
@@ -33,6 +34,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
+        "name": "bimbalasaas-desktop",
         "icon": "./assets/256x256"
       },
       "makers": [
