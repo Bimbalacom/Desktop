@@ -1,7 +1,7 @@
 {
   "name": "bimbalasaas-desktop",
   "productName": "Bimbala Desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Desktop app version of Bimbala",
   "main": "main.js",
   "scripts": {
@@ -34,14 +34,14 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "name": "bimbalasaas-desktop",
+        "name": "bimbala-desktop",
         "icon": "./assets/256x256"
       },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "bimbalasaas_desktop"
+            "name": "bimbala_desktop"
           }
         },
         {

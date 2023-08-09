@@ -1,48 +1,39 @@
-const electron = require('electron')
+const electron = require('electron');
+const path = require('path'); // Add this line
 
-const BrowserWindow = electron.BrowserWindow
-const app = electron.app
+const BrowserWindow = electron.BrowserWindow;
+const app = electron.app;
 
 app.on('ready', () => {
-  createWindow()
-})
+  createWindow();
+});
 
-const host = 'board.bimbala.com';
-const serverUrl = `https://${host}`;
+// Define the path to your index.html file
+const indexPath = path.join(__dirname, 'index.html'); // Assuming index.html is in the same directory as your main script
 
-
-let mainWindow
+let mainWindow;
 
 function createWindow() {
-  
-  // Create the browser window.
-  const {
-    width,
-    height
-  } = electron.screen.getPrimaryDisplay().workAreaSize
+  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize;
   mainWindow = new BrowserWindow({
     width: width,
     height: height,
     show: false,
-    autoHideMenuBar: true
-  })
-
-  mainWindow.loadURL(serverUrl)
-
-  mainWindow.webContents.once('dom-ready', function () {
-    mainWindow.show()
-    mainWindow.maximize();
-    // mainWindow.webContents.openDevTools()
+    autoHideMenuBar: true,
   });
 
-  
+  mainWindow.loadFile(indexPath); // Load the local index.html file
 
-  // Emitted when the window is closed.
+  mainWindow.webContents.once('dom-ready', function () {
+    mainWindow.show();
+    mainWindow.maximize();
+    // mainWindow.webContents.openDevTools();
+  });
+
   mainWindow.on('closed', function () {
     mainWindow = null;
-  })
+  });
 }
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
@@ -56,12 +47,12 @@ app.on('window-all-closed', function () {
     // PHP SERVER QUIT
     app.quit();
   }
-})
+});
 
 app.on('activate', function () {
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
   if (mainWindow === null) {
-    createWindow()
+    createWindow();
   }
-})
+});
