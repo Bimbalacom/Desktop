@@ -94,10 +94,18 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<!-- RELEASE PLAN OF THE WEBSITE-->
-## Release plan of the website
+<!-- RELEASE PLAN OF THE APPLICATION-->
+## Release plan of the application
 
 - There isn't an official plan for now. We will keep an eye on everything and update it as much as possible.
+
+<!-- RELEASE PLAN OF THE APPLICATION-->
+## Useful Commands
+
+- npx tailwindcss -i ./assets/style.css -o ./assets/style.min.css --watch = generate a minified version of the CSS, and continuously watch for changes in the style.css file, updating the output whenever changes occur.
+* npm run dev = to start the application in development mode
+* npx tailwindcss -o ./assets/style.min.css --minify = to generate a minified version of the CSS
+* npm run package = to build the application
 
 <!-- LICENSE -->
 ## License
