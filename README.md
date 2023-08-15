@@ -99,7 +99,7 @@ Contributions are what make the open source community such an amazing place to b
 
 - There isn't an official plan for now. We will keep an eye on everything and update it as much as possible.
 
-<!-- RELEASE PLAN OF THE APPLICATION-->
+<!-- Useful Commands -->
 ## Useful Commands
 
 - npx tailwindcss -i ./assets/style.css -o ./assets/style.min.css --watch = generate a minified version of the CSS, and continuously watch for changes in the style.css file, updating the output whenever changes occur.
