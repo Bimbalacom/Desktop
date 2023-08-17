@@ -8,8 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make",
-    "make-mac": "npx @electron-forge/cli make --platform darwin"
+    "make": "npm run make-linux && npm run make-zip && npm run make-windows",
+    "make-linux": "electron-forge make --platform linux",
+    "make-zip": "electron-forge make --platform darwin",
+    "make-windows": "electron-forge make --platform win32",
+    "publish": "electron-forge publish"
   },
   "keywords": [
     "project",
@@ -26,6 +29,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "@electron-forge/publisher-github": "^6.3.0",
     "electron": "^26.0.0",
     "tailwindcss": "^3.3.3"
   },
@@ -58,6 +62,18 @@
         {
           "name": "@electron-forge/maker-rpm",
           "config": {}
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "Bimbalacom",
+              "name": "Desktop"
+            },
+            "draft": true
+          }
         }
       ]
     }
