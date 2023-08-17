@@ -1,7 +1,7 @@
 {
   "name": "bimbala-desktop",
   "productName": "Bimbala Desktop",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Desktop app version of Bimbala",
   "main": "main.js",
   "scripts": {
