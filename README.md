@@ -102,10 +102,18 @@ Contributions are what make the open source community such an amazing place to b
 <!-- Useful Commands -->
 ## Useful Commands
 
-* npx tailwindcss -i ./assets/style.css -o ./assets/style.min.css --watch = generate a minified version of the CSS, and continuously watch for changes in the style.css file, updating the output whenever changes occur.
-* npm run dev = to start the application in development mode
-* npx tailwindcss -o ./assets/style.min.css --minify = to generate a minified version of the CSS
-* npm run package = to build the application
+* Continuously watch for changes in the `style.css` file, updating the output file whenever changes occur.
+```bash
+npx tailwindcss -i ./assets/style.css -o ./assets/style.min.css --watch
+```
+* Generate a minified version of the CSS
+```bash
+npx tailwindcss -o ./assets/style.min.css --minify 
+```
+* Build the application
+```bash
+npm run package
+```
 
 <!-- LICENSE -->
 ## License
