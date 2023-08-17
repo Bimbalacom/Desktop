@@ -1,5 +1,5 @@
 {
-  "name": "bimbalasaas-desktop",
+  "name": "bimbala-desktop",
   "productName": "Bimbala Desktop",
   "version": "1.0.1",
   "description": "Desktop app version of Bimbala",
@@ -19,7 +19,7 @@
     "roadmap"
   ],
   "author": "Bimbala",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
     "@electron-forge/maker-deb": "^6.0.0-beta.63",
