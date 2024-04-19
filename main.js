@@ -1,10 +1,12 @@
 const electron = require('electron');
 const path = require('path'); // Add this line
+const { updateElectronApp } = require('update-electron-app');
 
 const BrowserWindow = electron.BrowserWindow;
 const app = electron.app;
 
 app.on('ready', () => {
+  updateElectronApp();
   createWindow();
 });
 

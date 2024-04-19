@@ -34,7 +34,12 @@
     "tailwindcss": "^3.4.3"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "update-electron-app": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bimbalacom/Desktop.git"
   },
   "config": {
     "forge": {
