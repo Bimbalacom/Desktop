@@ -72,7 +72,8 @@
               "owner": "Bimbalacom",
               "name": "Desktop"
             },
-            "draft": true
+            "draft": true,
+            "generateReleaseNotes": true
           }
         }
       ]
